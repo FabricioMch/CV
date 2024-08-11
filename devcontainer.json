@@ -1,0 +1,22 @@
+{
+  "name": "R Development Environment",
+  "dockerFile": "Dockerfile",
+  "context": ".",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "reditorsupport.r",
+        "yzhang.markdown-all-in-one",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  },
+  "settings": {
+    "r.rterm.linux": "/usr/local/bin/R",
+    "r.rpath.linux": "/usr/local/bin/R",
+    "r.lsp.debug": true,
+    "editor.formatOnSave": true
+  },
+  "remoteUser": "root",
+  "postCreateCommand": "Rscript packages.R"
+}
